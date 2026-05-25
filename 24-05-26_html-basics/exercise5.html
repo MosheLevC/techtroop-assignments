@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <div>
+      <h1>Contact Us</h1>
+      <form action="mailto:moshelevc@gmail.com" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">*Name:</label>
+          <input required id="name" name="name" placeholder="Your name" /><br />
+          <label for="email">*Email:</label>
+          <input required type="email" id="email" name="email" placeholder="your@email.com" /><br />
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" placeholder="051-2345678" /><br />
+        </fieldset>
+        <fieldset>
+          <legend>Message Details</legend>
+          <label for="type">*Message Type:</label>
+          <select required name="type" id="type">
+            <option value="" disabled selected>Select message type</option>
+            <option value="bug">Bug</option>
+            <option value="ticket">Ticket</option>
+            <option value="feedback">Feedback</option></select
+          ><br />
+          <label>*Priority:</label><br />
+          <input required type="radio" id="low" name="priority" value="low" />
+          <label for="low">Low</label>
+          <input required type="radio" id="medium" name="priority" value="medium" />
+          <label for="medium">Medium</label>
+          <input required type="radio" id="high" name="priority" value="high" />
+          <label for="high">High</label><br />
+          <label for="message">*Message:</label><br />
+          <textarea required id="message" name="message" placeholder="Your message..."></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Preferences</legend>
+          <input type="checkbox" id="newsletter" name="newsletter" value="subscribe" />
+          <label for="newsletter">Subscribe to newsletter</label>
+        </fieldset>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+      </form>
+    </div>
+  </body>
+</html>
