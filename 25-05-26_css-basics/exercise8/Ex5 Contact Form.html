@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <style>
+      * {
+        font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+      }
+      body {
+        background-color: #f5f7fa;
+      }
+      h1 {
+        color: #2980b9;
+        text-align: center;
+      }
+      form {
+        background-color: white;
+        width: 65%;
+        justify-self: center;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px;
+      }
+      legend {
+        color: #2980b9;
+        background-color: white;
+        font-weight: bolder;
+      }
+      fieldset {
+        border-color: #3498db;
+        border-radius: 4px;
+        background-color: #ecf0f1;
+        margin: 15px;
+      }
+      label {
+        color: #34495e;
+        font-weight: bolder;
+        margin: 10px;
+        display: inline-block;
+        margin: 10px 0;
+      }
+      input,
+      textarea,
+      select {
+        border-radius: 3px;
+        border-color: #bdc3c7;
+      }
+      button {
+        color: white;
+        padding: 5px 15px;
+        margin: 3px;
+        border: 0;
+        border-radius: 3px;
+      }
+      .submit {
+        background-color: #25ae60;
+        margin-left: 15px;
+      }
+      .reset {
+        background-color: #e74b3c;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Contact Us</h1>
+      <form action="mailto:moshelevc@gmail.com" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input required id="name" name="name" placeholder="Your name" /><br />
+          <label for="email">Email:</label>
+          <input required type="email" id="email" name="email" placeholder="your@email.com" /><br />
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" placeholder="051-2345678" /><br />
+        </fieldset>
+        <fieldset>
+          <legend>Message Details</legend>
+          <label for="type">Message Type:</label>
+          <select required name="type" id="type">
+            <option value="" disabled selected>Select message type</option>
+            <option value="bug">Bug</option>
+            <option value="ticket">Ticket</option>
+            <option value="feedback">Feedback</option></select
+          ><br />
+          <label>Priority:</label><br />
+          <input required type="radio" id="low" name="priority" value="low" />
+          <label for="low">Low</label>
+          <input required type="radio" id="medium" name="priority" value="medium" />
+          <label for="medium">Medium</label>
+          <input required type="radio" id="high" name="priority" value="high" />
+          <label for="high">High</label><br />
+          <label for="message">Message:</label><br />
+          <textarea required id="message" name="message" placeholder="Your message..."></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Preferences</legend>
+          <input type="checkbox" id="newsletter" name="newsletter" value="subscribe" />
+          <label for="newsletter">Subscribe to newsletter</label>
+        </fieldset>
+        <button class="submit" type="submit">submit</button>
+        <button class="reset" type="reset">reset</button>
+      </form>
+    </div>
+  </body>
+</html>
