@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lines and paragraph</title>
+    <style>
+      .flexbox {
+        display: flex;
+        justify-self: center;
+        justify-content: space-around;
+        width: 500px;
+        height: 500px;
+      }
+      .column {
+        display: flex;
+        height: 100%;
+        border: 2px solid darksalmon;
+        justify-content: center;
+      }
+      .large-column {
+        flex: 3;
+        align-items: center;
+      }
+      .small-column {
+        flex: 1;
+        align-items: flex-end;
+      }
+      .lines-container {
+        display: flex;
+        height: 80px;
+        width: 80px;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .paragraph {
+        width: 80%;
+        font-size: small;
+      }
+      .lines-container > div {
+        background-color: #f08080;
+        height: 12px;
+      }
+      .lines-container > div:last-child {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body class="flexbox">
+    <div class="column small-column">
+      <div class="lines-container">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="column large-column">
+      <p class="paragraph">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, quod laudantium? Et animi nihil doloribus architecto totam quae, dolores
+        pariatur enim earum maiores reiciendis iste vel praesentium molestiae obcaecati ab!
+      </p>
+    </div>
+  </body>
+</html>
