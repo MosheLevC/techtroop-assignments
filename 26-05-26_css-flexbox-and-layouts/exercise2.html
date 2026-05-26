@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise 2</title>
+    <style>
+      .flex-column {
+        display: flex;
+        justify-self: center;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        height: 400px;
+      }
+      .flex-row {
+        display: flex;
+        height: 100px;
+        background-color: cornflowerblue;
+        border: 2px solid gray;
+      }
+      .square {
+        flex: 2;
+        border: 2px solid white;
+      }
+      .small-square {
+        flex: 1;
+        border: 2px solid white;
+      }
+    </style>
+  </head>
+  <body class="flex-column">
+    <div class="flex-row">
+      <div class="square">1</div>
+      <div class="square">2</div>
+      <div class="square">3</div>
+      <div class="square">4</div>
+    </div>
+    <div class="flex-row">
+      <div class="small-square">1</div>
+      <div class="square">2</div>
+      <div class="square">3</div>
+    </div>
+  </body>
+</html>
