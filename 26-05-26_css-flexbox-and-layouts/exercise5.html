@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text and box alignment</title>
+    <style>
+      .flexbox {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        width: 420px;
+        height: 420px;
+      }
+      .row {
+        display: flex;
+        background-color: #dcdcdc;
+        justify-content: space-evenly;
+        flex: 2;
+      }
+      .row:first-child {
+        flex: 1;
+      }
+      .big-square {
+        height: 200px;
+        width: 200px;
+        background-color: cornflowerblue;
+      }
+      .square-group {
+        display: flex;
+        flex-wrap: wrap;
+        height: 200px;
+        width: 200px;
+        align-content: space-between;
+        justify-content: space-between;
+      }
+      .square {
+        height: 48%;
+        width: 48%;
+        background-color: cornflowerblue;
+      }
+      .paragraph {
+        width: 80%;
+        color: #211f74;
+      }
+    </style>
+  </head>
+  <body class="flexbox">
+    <div class="row">
+      <p class="paragraph">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, quod laudantium? Et animi nihil doloribus architecto totam quae, dolores
+        pariatur enim earum maiores reiciendis iste vel praesentium molestiae obcaecati ab!
+      </p>
+    </div>
+    <div class="row">
+      <div class="big-square"></div>
+      <div class="square-group">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+    </div>
+  </body>
+</html>
