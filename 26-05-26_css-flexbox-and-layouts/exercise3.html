@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle and paragraph</title>
+    <style>
+      .flexbox {
+        display: flex;
+        justify-self: center;
+        justify-content: space-around;
+        width: 500px;
+        height: 500px;
+      }
+      .column {
+        display: flex;
+        height: 100%;
+        background-color: white;
+        border: 1px solid gray;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+      }
+      .circle {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: cornflowerblue;
+      }
+      .paragraph {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body class="flexbox">
+    <div class="column">
+      <div class="circle"></div>
+    </div>
+    <div class="column">
+      <p class="paragraph">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, quod laudantium? Et animi nihil doloribus architecto totam quae, dolores
+        pariatur enim earum maiores reiciendis iste vel praesentium molestiae obcaecati ab!
+      </p>
+    </div>
+  </body>
+</html>
