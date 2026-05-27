@@ -4,7 +4,184 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Holy Grail layout</title>
-    <style></style>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+      header {
+        background: linear-gradient(90deg, #697fe9 0%, #764da5 100%);
+      }
+      header > h1 {
+        color: white;
+        margin-left: 15px;
+      }
+      h1 {
+        font-size: large;
+      }
+      h2 {
+        font-size: smaller;
+        margin: 0;
+      }
+      footer {
+        background-color: #343a40;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        align-items: center;
+        height: 80px;
+        justify-content: space-evenly;
+      }
+      footer > p {
+        color: white;
+        margin: 0;
+      }
+      .links {
+        display: flex;
+        gap: 15px;
+      }
+      .links > a {
+        display: inline-block;
+        color: #707981;
+        text-decoration: none;
+      }
+      aside {
+        background-color: #f8f9fa;
+      }
+      aside > h2 {
+        margin: 12px;
+        color: #495057;
+      }
+      aside > ul {
+        padding: 0;
+        margin: 10px;
+      }
+      aside > ul > li {
+        margin-top: 10px;
+        list-style-type: none;
+        display: flex;
+      }
+      aside > ul > li > a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #707981;
+        padding: 10px;
+        flex: 1;
+      }
+      .navbar {
+        min-width: 15%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .container > main {
+        display: flex;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        min-height: 0;
+      }
+      .content {
+        padding: 10px;
+        flex: 1;
+      }
+      .features {
+        margin: 15px;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 1px;
+        background-color: #f8f9fa;
+      }
+      .features > h1 {
+        margin: 0;
+        color: #495057;
+      }
+      .sidebar {
+        flex: 0;
+        min-width: 15%;
+      }
+      .sidebar > h2 {
+        color: #495057;
+      }
+      .sidebar-texbox {
+        margin: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 1px;
+        background-color: white;
+      }
+      .sidebar-texbox > h2 {
+        font-size: 13px;
+      }
+      .sidebar-texbox > p {
+        font-size: 13px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header><h1>Holy Grail Layout Demo</h1></header>
+      <main>
+        <aside class="navbar">
+          <h2>NAVIGATION</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </aside>
+        <div class="content">
+          <h1>Welcome to the holy grail layout</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem officia similique culpa, vitae eius autem reiciendis
+            veniam alias quos praesentium ipsam iure repellendus saepe. Reprehenderit voluptates in expedita corrupti.
+          </p>
+          <div class="features">
+            <h1>Key Features</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem officia similique culpa, vitae eius autem reiciendis
+              veniam alias quos praesentium ipsam iure repellendus saepe. Reprehenderit voluptates in expedita corrupti.
+            </p>
+          </div>
+        </div>
+        <aside class="sidebar">
+          <h2>SIDEBAR</h2>
+          <div class="sidebar-texbox">
+            <h2>Quick Info</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing veniam alias quos praesentium ipsam iure</p>
+          </div>
+          <div class="sidebar-texbox">
+            <h2>Latest News</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing veniam alias quos praesentium ipsam iure</p>
+          </div>
+        </aside>
+      </main>
+      <footer>
+        <p>© 2025 Holy Grail Layout. Built with CSS Flexbox</p>
+        <div class="links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Support</a>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
