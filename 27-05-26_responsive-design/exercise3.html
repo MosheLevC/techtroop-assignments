@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Gallery</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        flex-wrap: wrap;
+        background: linear-gradient(225deg, #e4e9f2 0%, #9dc3ea 100%);
+      }
+      .row {
+        height: 33vh;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+        flex-wrap: wrap;
+      }
+      .column {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        background-color: cadetblue;
+        border-radius: 5px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .image-text {
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 5px;
+        font-size: 14px;
+        color: #d3d3d3cc;
+        -webkit-text-stroke: 1px #585858cc;
+      }
+      @media (min-width: 600px) {
+        .column {
+          width: calc((100% - 10px) / 2);
+        }
+        .image-text {
+          font-size: 16px;
+        }
+      }
+      @media (min-width: 900px) {
+        .column {
+          width: calc((100% - 20px) / 3);
+        }
+        .image-text {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <a
+        href="https://cdn.plnspttrs.net/20827/4x-elb-el-al-israel-airlines-boeing-747-458_PlanespottersNet_1663517_066774e8b7_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/20827/4x-elb-el-al-israel-airlines-boeing-747-458_PlanespottersNet_1663517_066774e8b7_o.jpg"
+          alt="EL AL 747-400"
+        />
+        <p class="image-text">El Al 747</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/09341/905-israeli-air-force-lockheed-martin-f-35i-adir_PlanespottersNet_1405961_c948a84f07_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/09341/905-israeli-air-force-lockheed-martin-f-35i-adir_PlanespottersNet_1405961_c948a84f07_o.jpg"
+          alt="IAF F-35I Adir"
+        />
+        <p class="image-text">IAF F-35I Adir</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/01749/4x-isr-israeli-air-force-boeing-767-338er_PlanespottersNet_1657319_ea30c7f70d_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/01749/4x-isr-israeli-air-force-boeing-767-338er_PlanespottersNet_1657319_ea30c7f70d_o.jpg"
+          alt="Israeli Government 767-300"
+        />
+        <p class="image-text">Israeli Government 767-300</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/23536/4x-iha-airhaifa-atr-72-600-72-212a_PlanespottersNet_1841990_682ca56d63_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/23536/4x-iha-airhaifa-atr-72-600-72-212a_PlanespottersNet_1841990_682ca56d63_o.jpg"
+          alt="AirHaifa ATR 72-600"
+        />
+        <p class="image-text">AirHaifa ATR 72-600</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/29770/cs-tce-arkia-israeli-airlines-airbus-a330-203_PlanespottersNet_1903165_66ca6d684a_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/29770/cs-tce-arkia-israeli-airlines-airbus-a330-203_PlanespottersNet_1903165_66ca6d684a_o.jpg"
+          alt="Arkia a330-200"
+        />
+        <p class="image-text">Arkia a330-200</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/08721/4x-atn-israir-airlines-atr-42-320_PlanespottersNet_329180_4fb8e2393c_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/08721/4x-atn-israir-airlines-atr-42-320_PlanespottersNet_329180_4fb8e2393c_o.jpg"
+          alt="Israir ATR 42-300"
+        />
+        <p class="image-text">Israir ATR 42-300</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/32773/4x-ica-challenge-airlines-il-boeing-747-4everf_PlanespottersNet_1608790_651a5897e6_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/32773/4x-ica-challenge-airlines-il-boeing-747-4everf_PlanespottersNet_1608790_651a5897e6_o.jpg"
+          alt="Challenge Airlines IL 747"
+        />
+        <p class="image-text">CAL Airlines 747-400f</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/01192/n278wa-el-al-israel-airlines-mcdonnell-douglas-md-11er_PlanespottersNet_1294449_1b60a4a052_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/01192/n278wa-el-al-israel-airlines-mcdonnell-douglas-md-11er_PlanespottersNet_1294449_1b60a4a052_o.jpg"
+          alt="EL AL MD-11"
+        />
+        <p class="image-text">EL AL MD-11</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/34537/295-israeli-air-force-boeing-kc-707-reem-707-366c_PlanespottersNet_1518093_70431d79a5_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/34537/295-israeli-air-force-boeing-kc-707-reem-707-366c_PlanespottersNet_1518093_70431d79a5_o.jpg"
+          alt="IAF Airforce 707 Re'em"
+        />
+        <p class="image-text">IAF 707 Re'em</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/48867/4x-ebt-sun-dor-international-airlines-boeing-757-258_PlanespottersNet_463277_f47818e4fd_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/48867/4x-ebt-sun-dor-international-airlines-boeing-757-258_PlanespottersNet_463277_f47818e4fd_o.jpg"
+          alt="Sundor 757-200"
+        />
+        <p class="image-text">Sundor 757-200</p>
+      </a>
+      <a href="https://cdn.plnspttrs.net/30941/4x-eku-up-boeing-737-8z9-wl_PlanespottersNet_1028884_49cdea1e7b_o.jpg" target="_blank" class="column">
+        <img src="https://cdn.plnspttrs.net/30941/4x-eku-up-boeing-737-8z9-wl_PlanespottersNet_1028884_49cdea1e7b_o.jpg" alt="Up 737-800" />
+        <p class="image-text">Up 737-800</p>
+      </a>
+      <a
+        href="https://cdn.plnspttrs.net/29062/050-israeli-air-force-general-dynamics-f-16d-fighting-falcon_PlanespottersNet_1140767_ca27eeb720_o.jpg"
+        target="_blank"
+        class="column"
+      >
+        <img
+          src="https://cdn.plnspttrs.net/29062/050-israeli-air-force-general-dynamics-f-16d-fighting-falcon_PlanespottersNet_1140767_ca27eeb720_o.jpg"
+          alt="IAF F-16d"
+        />
+        <p class="image-text">IAF F-16d</p>
+      </a>
+    </div>
+  </body>
+</html>
