@@ -60,7 +60,6 @@
         flex: 0;
         min-width: 15%;
         flex-basis: auto;
-        /* overflow-y: auto; */
         background-color: #f8f9fa;
       }
       nav > h2 {
@@ -70,12 +69,10 @@
       }
       nav > ul {
         padding: 0;
-        /* margin: 10px; */
         margin: 0;
         display: flex;
       }
       nav > ul > li {
-        /* margin-top: 10px; */
         list-style-type: none;
         display: flex;
       }
@@ -110,7 +107,6 @@
       .page-text {
         padding: 10px 50px;
         flex: 1;
-        /* overflow-y: auto; */
       }
       .features {
         margin: 15px;
@@ -134,22 +130,21 @@
       }
       aside > h2 {
         width: 100%;
-        /* margin: 12px; */
         margin: 10px 45px;
         color: #495057;
         display: none;
       }
-      .sidebar-texbox {
+      .sidebar-textbox {
         padding: 12px;
         border-radius: 10px;
         box-shadow: 0 0 1px;
         background-color: white;
         width: 40%;
       }
-      .sidebar-texbox > h2 {
+      .sidebar-textbox > h2 {
         font-size: 13px;
       }
-      .sidebar-texbox > p {
+      .sidebar-textbox > p {
         font-size: 13px;
       }
       @media (min-width: 600px) {
@@ -170,20 +165,19 @@
         }
         aside {
           padding: 0;
+          display: block;
           overflow-y: auto;
-          align-content: flex-start;
+          overflow-x: hidden;
+          flex: 0 0 200px;
         }
         .page-content {
           flex-direction: row;
-          overflow-y: auto;
+          overflow: hidden;
         }
-        .sidebar-texbox {
+        .sidebar-textbox {
+          width: auto;
           margin: 15px;
-          padding: 12px;
-          border-radius: 10px;
-          box-shadow: 0 0 1px;
-          background-color: white;
-          width: 90%;
+          box-sizing: border-box;
         }
         .page-text {
           padding: 10px;
@@ -224,11 +218,11 @@
           </div>
           <aside>
             <h2>SIDEBAR</h2>
-            <div class="sidebar-texbox">
+            <div class="sidebar-textbox">
               <h2>Quick Info</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing veniam alias quos praesentium ipsam iure</p>
             </div>
-            <div class="sidebar-texbox">
+            <div class="sidebar-textbox">
               <h2>Latest News</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing veniam alias quos praesentium ipsam iure</p>
             </div>
