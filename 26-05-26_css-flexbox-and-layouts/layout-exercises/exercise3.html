@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        background: linear-gradient(135deg, #697fe9 0%, #764da5 100%);
+        height: 100vh;
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+      .single {
+        flex-basis: 90%;
+      }
+      .dual {
+        flex-basis: 45%;
+      }
+      .container {
+        margin: auto;
+        background-color: white;
+        max-width: 500px;
+        padding: 0 25px;
+        border-radius: 10px;
+      }
+      .container > h1,
+      .container > h3 {
+        text-align: center;
+      }
+      h1 {
+        color: #333333;
+        font-weight: bolder;
+        margin-bottom: 0;
+        margin-top: 10px;
+      }
+      h3 {
+        font-size: medium;
+        color: #666666;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .column {
+        flex-direction: column;
+        gap: 5px;
+      }
+      .item {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+      }
+      .buttons {
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .buttons > button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bolder;
+      }
+      .buttons > button:active {
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.6);
+      }
+      .save-button {
+        background-color: #f8f9fa;
+        color: #666666;
+        border: 1px #e1e5e9 solid;
+      }
+      .send-button {
+        background-image: linear-gradient(90deg, #50b4fe 0%, #13eafe 100%);
+        color: white;
+        border: none;
+      }
+      .checkbox-group {
+        display: flex;
+        flex-grow: 1;
+        gap: 20px;
+      }
+      .checkbox-item {
+        display: flex;
+        align-items: center;
+      }
+      label,
+      legend {
+        font-weight: bolder;
+        color: #555555;
+      }
+      .item > input,
+      select {
+        border: 2px solid #e1e5e9;
+        border-radius: 4px;
+        height: 30px;
+      }
+      textarea {
+        border: 2px solid #e1e5e9;
+        border-radius: 4px;
+        resize: vertical;
+      }
+      fieldset.item {
+        border: none;
+        padding: 0;
+        margin: 0;
+        min-width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Form</h1>
+      <h3>Get in touch with us</h3>
+      <form action="mailto:moshelevc@gmail.com" method="post">
+        <div class="item dual column">
+          <label for="fname">First Name</label>
+          <input required id="fname" name="fname" />
+        </div>
+        <div class="item dual column">
+          <label for="lname">Last Name</label>
+          <input required id="lname" name="lname" />
+        </div>
+        <div class="item single column">
+          <label for="email">Email Address</label>
+          <input required type="email" id="email" name="email" />
+        </div>
+        <div class="item dual column">
+          <label for="type">Subject</label>
+          <select required name="type" id="type">
+            <option value="" disabled selected>Select a topic</option>
+            <option value="bug">Bug</option>
+            <option value="ticket">Ticket</option>
+            <option value="feedback">Feedback</option>
+          </select>
+        </div>
+        <div class="item dual column">
+          <label for="priority">Priority</label>
+          <select required name="priority" id="priority">
+            <option value="" disabled selected>Select priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <div class="item single column">
+          <label for="message">Message</label>
+          <textarea required id="message" name="message" placeholder="Tell us how we can help..."></textarea>
+        </div>
+        <fieldset class="item single column">
+          <legend>Contact Preferences</legend>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="email-contact" name="contact-preferences[]" value="email-updates" />
+              <label for="email-contact">Email Updates</label>
+            </div>
+            <div>
+              <input type="checkbox" id="phone-contact" name="contact-preferences[]" value="phone-updates" />
+              <label for="phone-contact">Phone Follow-up</label>
+            </div>
+            <div>
+              <input type="checkbox" id="newsletter" name="contact-preferences[]" value="subscribe" />
+              <label for="newsletter">Newsletter</label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="item single buttons">
+          <button class="save-button" type="button">Save Draft</button>
+          <button class="send-button" type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
