@@ -62,3 +62,17 @@ let passwordLength = 7;
 let userAge = 15;
 validatePassword(usernameLength, passwordLength, userAge);
 ////////////////////////////
+
+//exercise 5
+const calculateDiscount = (customerType, purchaseAmount, dayOfWeek) => {
+  if (customerType === "vip") console.log("20%");
+  else if (customerType === "premium") {
+    dayOfWeek === 6 || dayOfWeek === 0 ? console.log("15%") : console.log("10%");
+  } else purchaseAmount >= 100 ? console.log("10%") : purchaseAmount >= 50 ? console.log("5%") : console.log("0%");
+};
+let customerType = "premium";
+let purchaseAmount = 150;
+let dayOfWeek = 6;
+calculateDiscount(customerType, purchaseAmount, dayOfWeek);
+
+////////////////////////////
