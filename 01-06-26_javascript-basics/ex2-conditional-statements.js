@@ -74,5 +74,12 @@ let customerType = "premium";
 let purchaseAmount = 150;
 let dayOfWeek = 6;
 calculateDiscount(customerType, purchaseAmount, dayOfWeek);
+////////////////////////////
 
+//exercise 6
+const calculateLeapYear = (year) => {
+  console.log(year % 4 === 0 ? (year % 100 !== 0 ? true : year % 400 === 0 ? true : false) : false);
+};
+let year = 2024;
+calculateLeapYear(year);
 ////////////////////////////
