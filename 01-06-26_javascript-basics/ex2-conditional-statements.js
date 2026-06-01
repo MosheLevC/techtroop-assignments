@@ -34,3 +34,31 @@ let temperature = 20;
 let weather = "sunny";
 weatherRecommendation(temperature, weather);
 ////////////////////////////
+
+//exercise 4
+const validatePassword = (usernameLength, passwordLength, userAge) => {
+  const isValidUsername = usernameLength >= 5;
+  const isValidPassword = passwordLength >= 8;
+  const isValidUserAge = userAge >= 13;
+
+  if (!isValidUsername || !isValidPassword || !isValidUserAge) {
+    if (!isValidUsername && !isValidPassword && !isValidUserAge) {
+      console.log("all your fields suck");
+    } else {
+      if (!isValidUsername) {
+        console.log("username must be at least 5 characters");
+      }
+      if (!isValidPassword) {
+        console.log("password must be at least 8 characters");
+      }
+      if (!isValidUserAge) {
+        console.log("user hasn't had bar mitzvah yet");
+      }
+    }
+  } else console.log("you're good to go");
+};
+let usernameLength = 6;
+let passwordLength = 7;
+let userAge = 15;
+validatePassword(usernameLength, passwordLength, userAge);
+////////////////////////////
