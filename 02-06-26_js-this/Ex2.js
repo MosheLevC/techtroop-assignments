@@ -1,6 +1,6 @@
 const pump = function (amount) {
-  liters += amount;
-  console.log("You put " + this.amount + " liters in " + this.name);
+  this.liters += amount;
+  console.log("You put " + amount + " liters in " + this.name);
 };
 
 const garage = {
