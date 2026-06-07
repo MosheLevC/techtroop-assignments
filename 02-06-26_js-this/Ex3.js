@@ -4,12 +4,13 @@ const pumpFuel = function (plane) {
 
 const airplane = {
   fly: function () {
-    if (fuel < 2) {
+    if (this.fuel < 2) {
       return "on the ground!";
     } else {
       return "flying!";
     }
   },
+  fuel: 0,
 };
 
 console.log("The plane should not be able to fly (yet): " + airplane.fly());
