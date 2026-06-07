@@ -234,8 +234,29 @@ let users = [
 
 // exercise 1 map data differently
 const emailsAndName = () =>
-  // return users[0]["email"];
   users.map((user) => {
     return { email: user?.email, companyName: user?.company?.name };
   });
+
 console.log(emailsAndName());
+//////////////////////////////
+
+// exercise 4
+const onlyNamesStartingInC = users.reduce((filteredNames, user) => {
+  if (user.name[0] === "C") {
+    filteredNames.push({ name: user.name });
+  }
+  return filteredNames;
+}, []);
+
+// const onlyNamesStartingInC = () =>
+//   users
+//     .filter((user) => user.name[0] === "C")
+//     .map((user) => {
+//       return {
+//         name: user.name,
+//       };
+//     });
+
+console.log(onlyNamesStartingInC);
+//////////////////////////////
