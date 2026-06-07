@@ -273,3 +273,15 @@ const calculateInventoryValue = inventory.reduce((sum, product) => sum + product
 
 console.log(calculateInventoryValue);
 //////////////////////////////
+
+// exercise 9 calculate grade amounts
+let studentScores = [92, 87, 76, 95, 88, 72, 91, 83, 79, 96, 85, 74, 89, 93, 81];
+const letter = (score) => (score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : "F");
+const gradeCount = studentScores.reduce(
+  (grade, score) => {
+    return { ...grade, [letter(score)]: grade[letter(score)] + 1 };
+  },
+  { A: 0, B: 0, C: 0, F: 0 },
+);
+
+console.log(gradeCount);
