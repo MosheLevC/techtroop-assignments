@@ -3,6 +3,9 @@ const tipJar = {
   tip: function () {
     this.coinCount += 1;
   },
+  stealCoins: function (amount) {
+    this.coinCount -= amount;
+  },
 };
 
 tipJar.tip();
