@@ -241,7 +241,7 @@ const emailsAndName = () =>
 console.log(emailsAndName());
 //////////////////////////////
 
-// exercise 4
+// exercise 4 only names starting with C
 const onlyNamesStartingInC = users.reduce((filteredNames, user) => {
   if (user.name[0] === "C") {
     filteredNames.push({ name: user.name });
