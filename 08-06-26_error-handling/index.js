@@ -6,7 +6,7 @@ const safeJsonParse = (stringifiedJson) => {
     return "Invalid JSON format";
   }
 };
-console.log(safeJsonParse('{"name": "John"}')); 
+console.log(safeJsonParse('{"name": "John"}'));
 // Output: { name: "John" }
 
 console.log(safeJsonParse("invalid json"));
