@@ -13,4 +13,14 @@ const removeAtLeastOne = (arr) => {
   return arr;
 };
 
-module.exports = { isEven, removeAtLeastOne };
+//Ex3
+//should return a clean string without these symbols: "!", "#", ".", ",", "'"
+const simplify = (str) => {
+  let symbols = ["!", "#", ".", ",", "'"];
+  return str
+    .split("")
+    .filter((c) => symbols.indexOf(c) == -1)
+    .join("");
+};
+
+module.exports = { isEven, removeAtLeastOne, simplify };
