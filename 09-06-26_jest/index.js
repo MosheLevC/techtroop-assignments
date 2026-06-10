@@ -27,7 +27,7 @@ const simplify = (str) => {
 const validate = (arr) => {
   let trueBooleanCount = 0;
   let falseBooleanCount = 0;
-
+  if (!arr) return "non valid array";
   arr.forEach((element) => {
     if (element === true) trueBooleanCount++;
     if (element === false) falseBooleanCount++;

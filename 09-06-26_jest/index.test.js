@@ -6,12 +6,17 @@ test("should return boolean of if it's even", () => {
   const even = isEven(8);
   expect(odd).toBeFalsy();
   expect(even).toBeTruthy();
+  //Ex5
+  expect(isEven()).toBeFalsy();
 });
 
 //Ex2
 test("should contain less items than original array", () => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
   expect(removeAtLeastOne([...arr]).length).toBeLessThan(arr.length);
+  //Ex5
+  expect(removeAtLeastOne([]).length).toBe(0);
 });
 
 //Ex3
@@ -24,6 +29,8 @@ test(`should remove special charachters: "!", "#", ".", ",", "'"`, () => {
   expect(simplify(complexString)).not.toContain(".");
   expect(simplify(complexString)).not.toContain(",");
   expect(simplify(complexString)).not.toContain("'");
+  //Ex5
+  expect(simplify("!#.,'")).toBe("");
 });
 
 //Ex4
@@ -39,4 +46,6 @@ test("should receive an array and verify it contains booleans and return true if
   expect(validate(mostlyFalseArr)).toBeFalsy();
   expect(validate(mixedTrueArray)).toBeTruthy();
   expect(validate(mixedFalseArray)).toBeFalsy();
+  //Ex5
+  expect(validate(null)).toBe("non valid array");
 });
