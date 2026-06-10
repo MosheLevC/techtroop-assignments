@@ -1,4 +1,4 @@
-const { isEven, removeAtLeastOne, simplify } = require(".");
+const { isEven, removeAtLeastOne, simplify, validate } = require(".");
 
 //Ex1
 test("should return boolean of if it's even", () => {
@@ -24,4 +24,19 @@ test(`should remove special charachters: "!", "#", ".", ",", "'"`, () => {
   expect(simplify(complexString)).not.toContain(".");
   expect(simplify(complexString)).not.toContain(",");
   expect(simplify(complexString)).not.toContain("'");
+});
+
+//Ex4
+test("should receive an array and verify it contains booleans and return true if most are true else false", () => {
+  const arrayWithoutBoolean = ["I", "have", "no", "boolean", 2];
+  const mostlyTrueArr = [true, false, false, true, true];
+  const mostlyFalseArr = [false, false, false, true];
+  const mixedTrueArray = ["I", true, "have", "no", "boolean", 2, true, false];
+  const mixedFalseArray = ["I", true, "have", "no", "boolean", 2, false];
+
+  expect(validate(arrayWithoutBoolean)).toEqual({ error: "Need at least one boolean" });
+  expect(validate(mostlyTrueArr)).toBeTruthy();
+  expect(validate(mostlyFalseArr)).toBeFalsy();
+  expect(validate(mixedTrueArray)).toBeTruthy();
+  expect(validate(mixedFalseArray)).toBeFalsy();
 });

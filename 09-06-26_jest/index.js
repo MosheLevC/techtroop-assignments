@@ -23,4 +23,22 @@ const simplify = (str) => {
     .join("");
 };
 
-module.exports = { isEven, removeAtLeastOne, simplify };
+//Ex4
+const validate = (arr) => {
+  let trueBooleanCount = 0;
+  let falseBooleanCount = 0;
+
+  arr.forEach((element) => {
+    if (element === true) trueBooleanCount++;
+    if (element === false) falseBooleanCount++;
+  });
+  if (trueBooleanCount === 0 && falseBooleanCount === 0) {
+    return { error: "Need at least one boolean" };
+  } else if (trueBooleanCount > falseBooleanCount) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+module.exports = { isEven, removeAtLeastOne, simplify, validate };
