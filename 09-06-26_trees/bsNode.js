@@ -35,8 +35,26 @@ const findNode = (node, searchedValue) => {
   return false;
 };
 
+const findCommonParent = (node, num1, num2) => {
+  if (node.value === num1 || node.value === num2) {
+    console.log(node.value);
+    return node.value;
+  }
+  if ((num1 > node.value && num2 < node.value) || (num1 < node.value && num2 > node.value)) {
+    console.log(node.value);
+    return node.value;
+  }
+  if (num1 > node.value && num2 > node.value) {
+    findCommonParent(node.rightChild, num1, num2);
+  }
+  if (num1 < node.value && num2 < node.value) {
+    findCommonParent(node.leftChild, num1, num2);
+  }
+};
+
 module.exports = {
   createBSNode,
   insertNode,
   findNode,
+  findCommonParent,
 };
