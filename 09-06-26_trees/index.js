@@ -1,4 +1,4 @@
-const { createBSNode, insertNode, findNode, findCommonParent } = require("./bsNode");
+const { createBSNode, insertNode, findNode, findCommonParent, removeNode } = require("./bsNode");
 
 const insertArrayIntoNode = (arr, tree) => {
   for (const value of arr) {
@@ -28,3 +28,13 @@ findCommonParent(tree2, "L", "Y"); //should return "R"
 // in the assignment it says this next one should return "J"
 // but unless I send the parent it wouldn't make sense so I assume it's supposed to be H
 findCommonParent(tree2, "E", "H");
+
+// Ex3
+const numbers = [8, 9, 12, 3, 5, 1, 11, 4];
+let nodeWithOneChild = createBSNode();
+insertArrayIntoNode(numbers, nodeWithOneChild);
+console.log(removeNode(nodeWithOneChild, nodeWithOneChild, 9)); // will return tree like the first image (the 9 will be deletied)
+
+let nodeWithTwoChildren = createBSNode();
+insertArrayIntoNode(numbers, nodeWithTwoChildren);
+console.log(removeNode(nodeWithTwoChildren, nodeWithTwoChildren, 8)); // will return tree like the second image (the root will be 5)
