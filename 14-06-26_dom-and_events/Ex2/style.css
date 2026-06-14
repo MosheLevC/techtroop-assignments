@@ -1,0 +1,11 @@
+body {
+  background-color: #ecf0f1;
+}
+
+.rejected-text {
+  color: red;
+}
+
+.approved-text {
+  color: green;
+}
