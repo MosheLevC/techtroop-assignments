@@ -7,18 +7,30 @@
   </head>
 
   <body>
-    <div>
-      <label>Name</label>
-      <input />
+    <div class="form-container">
+      <div class="input-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+      </div>
+
+      <div class="input-row inline-group">
+        <div class="field">
+          <label for="salary">Desired Salary</label>
+          <input type="number" id="salary" />
+        </div>
+        <div class="field">
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" />
+        </div>
+      </div>
+
+      <div class="input-row">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" />
+      </div>
+
+      <button id="submit-btn" onclick="validate()">Submit</button>
+      <div id="errors"></div>
     </div>
-    <div>
-      <label>Desired Salary</label>
-      <input />
-      <label>Birthday</label>
-      <input />
-    </div>
-    <label>Phone</label>
-    <input />
-    <button>Submit</button>
   </body>
 </html>
