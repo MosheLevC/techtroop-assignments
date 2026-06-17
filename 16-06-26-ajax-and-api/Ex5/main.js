@@ -4,6 +4,7 @@ import { GIPHY_API_KEY } from "./config.js";
 const searchButton = document.getElementById("search-button");
 const searchbox = document.getElementById("searchbox");
 const iFrame = document.createElement("iframe");
+const text = document.createElement("p");
 
 const catGif = (input) => {
   axios
@@ -16,8 +17,7 @@ const catGif = (input) => {
         iFrame.src = gifData.embed_url;
         body.appendChild(iFrame);
       } else {
-        const text = document.createElement("p");
-        text.textContent = "gif not found";
+        text.textContent = `gif "${input}" not found`;
         body.appendChild(text);
       }
     })
@@ -28,4 +28,5 @@ const catGif = (input) => {
 
 searchButton.addEventListener("click", () => {
   catGif(searchbox.value);
+  searchbox.value = "";
 });
