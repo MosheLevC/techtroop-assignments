@@ -9,9 +9,17 @@ const wisdoms = localWisdoms ? localWisdoms : [];
 const loadWordsOfWisdom = () => {
   wisdomContainer.innerHTML = "";
   for (const { text } of wisdoms) {
-    const p = document.createElement("p");
-    p.textContent = text;
-    wisdomContainer.appendChild(p);
+    const wisdomDiv = document.createElement("div");
+    const xButton = document.createElement("button");
+    const wisdomText = document.createElement("p");
+
+    xButton.textContent = "x";
+    xButton.className = "xButton";
+
+    wisdomText.textContent = text;
+    wisdomDiv.appendChild(xButton);
+    wisdomDiv.appendChild(wisdomText);
+    wisdomContainer.appendChild(wisdomDiv);
   }
   if (wisdoms.length !== 0 && wisdoms.length % 2 === 0) {
     localStorage.setItem("wisdoms", JSON.stringify(wisdoms));
