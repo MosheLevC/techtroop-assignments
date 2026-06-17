@@ -7,13 +7,22 @@ const searchBook = (queryType, queryValue) => {
     .then(({ data }) => {
       if (data.totalItems > 0) {
         const volumeInfo = data?.items[0]?.volumeInfo;
+        const items = data?.items;
+        for (const item of items) {
+          const volumeInfo = item.volumeInfo;
+          const isbnArray = volumeInfo.industryIdentifiers
+            ? volumeInfo.industryIdentifiers.map((industryIdentifiers) => industryIdentifiers.identifier)
+            : [];
+          const isbnString = isbnArray.length > 0 ? isbnArray.join(", ") : "N/A";
 
-        console.log(`
+          console.log(`
 title: ${volumeInfo.title ? volumeInfo.title : "N/A"}
 authors: ${volumeInfo.authors ? volumeInfo.authors : "N/A"}
+isbns: ${isbnString}
 published date: ${volumeInfo.publishedDate ? volumeInfo.publishedDate : "N/A"}
 average rating: ${volumeInfo.averageRating ? volumeInfo.averageRating : "N/A"}
         `);
+        }
       } else {
         console.log(`book not found for ${queryType}: ${queryValue}`);
       }
