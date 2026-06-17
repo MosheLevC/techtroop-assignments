@@ -1,10 +1,9 @@
 import axios from "axios";
 import { GOOGLE_BOOKS_API_KEY } from "../config.js";
 
-const isbns = ["9780575087057", "9782806269171", "1440633908", "9781945048470", "9780307417138"];
-const searchISBN = (isbn) => {
+const searchBook = (queryType, queryValue) => {
   axios
-    .get(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}&key=${GOOGLE_BOOKS_API_KEY}`)
+    .get(`https://www.googleapis.com/books/v1/volumes?q=${queryType}:${queryValue}&key=${GOOGLE_BOOKS_API_KEY}`)
     .then(({ data }) => {
       if (data.totalItems > 0) {
         const volumeInfo = data?.items[0]?.volumeInfo;
@@ -16,7 +15,7 @@ published date: ${volumeInfo.publishedDate ? volumeInfo.publishedDate : "N/A"}
 average rating: ${volumeInfo.averageRating ? volumeInfo.averageRating : "N/A"}
         `);
       } else {
-        console.log(`book not found for isbn: ${isbn}`);
+        console.log(`book not found for ${queryType}: ${queryValue}`);
       }
     })
     .catch((error) => {
@@ -24,6 +23,5 @@ average rating: ${volumeInfo.averageRating ? volumeInfo.averageRating : "N/A"}
     });
 };
 
-for (const isbn of isbns) {
-  searchISBN(isbn);
-}
+searchBook("isbn", 9789814561778);
+searchBook("title", "How to Win Friends and Influence People");
