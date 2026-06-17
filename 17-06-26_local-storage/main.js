@@ -1,8 +1,9 @@
-const searchButton = document.getElementById("search-button");
+const searchButton = document.getElementById("add-button");
+const clearButton = document.getElementById("clear-button");
 const searchbox = document.getElementById("searchbox");
 const wisdomContainer = document.getElementById("wisdomContainer");
 
-const localWisdoms = JSON.parse(localStorage.wisdoms);
+const localWisdoms = localStorage.wisdoms ? JSON.parse(localStorage.wisdoms) : false;
 const wisdoms = localWisdoms ? localWisdoms : [];
 
 const loadWordsOfWisdom = () => {
@@ -17,13 +18,24 @@ const loadWordsOfWisdom = () => {
   }
 };
 
-const handleClick = (input) => {
+const handleAddClick = (input) => {
   wisdoms.push({ text: input });
   loadWordsOfWisdom();
 };
 
+const handleClearClick = () => {
+  localStorage.removeItem("wisdoms");
+  wisdoms.length = 0;
+  loadWordsOfWisdom();
+};
+
 searchButton.addEventListener("click", () => {
-  handleClick(searchbox.value);
+  handleAddClick(searchbox.value);
+  searchbox.value = "";
+});
+
+clearButton.addEventListener("click", () => {
+  handleClearClick();
   searchbox.value = "";
 });
 
