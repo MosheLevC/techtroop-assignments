@@ -7,13 +7,19 @@
     <style>
       body {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
       }
       iframe {
         height: 300px;
       }
+      .container {
+        width: 100%;
+      }
     </style>
     <title>Giphy cat</title>
   </head>
-  <body id="body"></body>
+  <body id="body">
+    <div class="container"><input type="text" id="searchbox" /><button id="search-button">Search</button></div>
+  </body>
 </html>
