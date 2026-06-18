@@ -13,5 +13,3 @@ export async function getUserById(userId) {
     return null;
   }
 }
-
-console.log(await getUserById(999));
