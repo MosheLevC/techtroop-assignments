@@ -14,7 +14,10 @@ const loadWordsOfWisdom = () => {
     const wisdomText = document.createElement("p");
 
     xButton.textContent = "x";
-    xButton.className = "xButton";
+
+    xButton.addEventListener("click", () => {
+      handleDeleteClick(text);
+    });
 
     wisdomText.textContent = text;
     wisdomDiv.appendChild(xButton);
@@ -34,6 +37,16 @@ const handleAddClick = (input) => {
 const handleClearClick = () => {
   localStorage.removeItem("wisdoms");
   wisdoms.length = 0;
+  loadWordsOfWisdom();
+};
+
+const handleDeleteClick = (textToDelete) => {
+  const index = wisdoms.findIndex((wisdom) => wisdom.text === textToDelete);
+  if (index !== -1) {
+    wisdoms.splice(index, 1);
+  }
+
+  localStorage.setItem("wisdoms", JSON.stringify(wisdoms));
   loadWordsOfWisdom();
 };
 
