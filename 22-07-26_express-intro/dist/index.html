@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Intro & Static Server</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <main class="app-container">
+        <header class="hero">
+            <span class="badge">Express.js Static Server</span>
+            <h1>Welcome to Express Intro</h1>
+            <p class="subtitle">Served seamlessly from the <code>/dist</code> directory</p>
+        </header>
+
+        <section class="card-grid">
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>Server Status</h3>
+                <p>Express static middleware is active and serving assets.</p>
+                <div class="status-indicator">
+                    <span class="dot"></span> Online
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon">✨</div>
+                <h3>Interactive Demo</h3>
+                <p>Click below to trigger front-end JS logic loaded from <code>dist/script.js</code>.</p>
+                <button id="counterBtn" class="btn primary-btn">Clicks: <span id="clickCount">0</span></button>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>Fast & Lightweight</h3>
+                <p>Pre-configured Node.js environment ready for full-stack expansion.</p>
+                <button id="pingBtn" class="btn secondary-btn">Ping Server</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p id="pingResult" class="ping-text"></p>
+            <p>&copy; Express Intro Assignment</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
